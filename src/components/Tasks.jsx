@@ -8,13 +8,13 @@ import AddTask from "./AddTask";
 
 const Tasks = () => {
     const [tasks, setTasks] = useState([]);
+
     const fetchTasks = async () => {
         try {
             const { data } = await axios.get("http://localhost:8000/tasks");
 
             setTasks(data);
-
-            console.log(response);
+            
         } catch (error) {
             console.log(error);
         }
@@ -31,7 +31,7 @@ const Tasks = () => {
             <div className="last-tasks">
                 <h3>Últimas Tarefas</h3>
 
-                <AddTask />
+                <AddTask fetchTasks={fetchTasks} />
                 
                 <div className="tasks-list">
                     {tasks

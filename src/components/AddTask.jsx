@@ -9,7 +9,7 @@ import CustomButton from "./CustomButton";
 
 import { FaPlus } from "react-icons/fa";
 
-const AddTask = () => {
+const AddTask = ({ fetchTasks }) => {
     const [task, setTask] = useState("");
 
     const alert = useAlert();
@@ -30,7 +30,13 @@ const AddTask = () => {
                 description: task,
                 isCompleted: false,
             });
-        } catch (error) {}
+
+            await fetchTasks();
+
+            setTask("");
+        } catch (error) {
+            alert.error("Algo deu errado.");
+        }
     };
 
     return (
