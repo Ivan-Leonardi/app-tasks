@@ -28,7 +28,7 @@ const Tasks = () => {
     }, [tasks]);
 
     const completedTasks = useMemo(() => {
-        return tasks.filter((taks) => task.isCompleted === true);
+        return tasks.filter((task) => task.isCompleted === true);
     }, [tasks]);
 
     useEffect(() => {
