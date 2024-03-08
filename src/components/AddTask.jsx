@@ -34,6 +34,8 @@ const AddTask = ({ fetchTasks }) => {
             await fetchTasks();
 
             setTask("");
+
+            alert.success("A tarefa foi adiconada com sucesso!");
         } catch (error) {
             alert.error("Algo deu errado.");
         }
