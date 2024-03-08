@@ -6,9 +6,9 @@ import "./Sidebar.scss";
 
 const Sidebar = () => {
     return (
-        <div className="sidebar-contaiber">
+        <div className="sidebar-container">
             <div className="logo">
-                <img src={logo} alt="logo do aplicativo" />
+                <img src={logo} width={80} alt="logo do aplicativo" />
             </div>
 
             <div className="sign-out">

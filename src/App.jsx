@@ -1,10 +1,13 @@
-import Tasks from './components/Tasks';
+import Sidebar from "./components/Sidebar";
+import Tasks from "./components/Tasks";
 
-const App = () => {   
+import "./App.scss";
 
+const App = () => {
     return (
-        <div>
-           <Tasks />
+        <div className="app-container">
+            <Sidebar />
+            <Tasks />
         </div>
     );
 };
